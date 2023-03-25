@@ -1,0 +1,138 @@
+.container{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-gap: 10px;
+	height: 100vh;
+	margin: 2em;
+}
+section{
+	margin-top: 50px;
+}
+
+.main{
+	grid-column-start:1 ;
+	grid-column-end: 4;
+	grid-row-start: 1;
+	grid-row-end: 2;
+
+	text-align: center;
+}
+.first{
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 2;
+	grid-row-end: 3;
+	border: 10px solid black;
+
+}
+
+.second{
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	grid-row-end:3 ;
+	border: 10px solid black;
+}
+*{
+	text-align: inline;
+}
+.third{
+	grid-column-start: 3;
+	grid-column-end: 4;
+	grid-row-start: 2;
+	grid-row-end:3 ;
+	border: 10px solid black;
+}
+
+p{
+	float: right;
+	clear: both;
+	border: solid black;
+	background-color: darkred;
+	margin-top: 0.5px;
+
+
+
+
+}
+.container .first,.second,.third {
+	background-color: grey;
+}
+
+@media(min-width:768px) and (max-width:991px){
+
+	.container{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		grid-gap:20px;
+		height: 100vh;
+		margin: 2em;
+	}
+
+	.main{
+		grid-column: 1/3;
+		grid-row: 1/2;
+
+	}
+
+	.first{
+		grid-column:1/2 ;
+		grid-row:2/3 ;
+		border: 10px solid lavender;
+	}
+
+	.second{
+		grid-column:2/3 ;
+		grid-row:2/3 ;
+		border: 10px solid lavender;
+	}
+
+	.third{
+		grid-column:1/3 ;
+		grid-row:3/4 ;
+		border: 10px solid lavender;
+	}
+	p{
+		text-align: right;
+	}
+}
+
+@media(min-width:50px) and (max-width:767px){
+	.container{
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(4, 1fr);
+		grid-gap: 10px;
+		height: 100vh;
+		margin: 2em;
+	}
+
+	.main{
+		grid-column: 1/2;
+		grid-row: 1/2;
+	}
+
+	.first{
+		grid-column: 1/2;
+		grid-row: 2/3;
+		border: 10px solid darkkhaki;
+	}
+
+	.second{
+		grid-column: 1/2;
+		grid-row: 3/4;
+		border: 10px solid darkkhaki;
+	}
+
+	.third{
+		grid-column: 1/2;
+		grid-row: 4/5;
+		border: 10px solid darkkhaki;
+	}
+
+	p{
+		text-align: right;
+	}
+}
